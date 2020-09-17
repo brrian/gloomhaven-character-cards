@@ -5,11 +5,18 @@ import Cards from '../cards/Cards';
 import useDeckByState from '../cards/util/useDeckByState';
 import CardsSection from './CardsSection';
 import { CardState } from './models';
+import useSelectRandomCard from './util/useSelectRandomCard';
 
 const DiscardedCards = () => {
   const { loseCard, recoverCard } = useCardsStore();
 
   const cards = useDeckByState(CardState.Discarded);
+
+  const {
+    clearSelectedCard,
+    selectedCard,
+    selectRandomCard,
+  } = useSelectRandomCard(cards);
 
   const handleRecoveraAll = () => {
     for (const card of cards) {
@@ -19,8 +26,12 @@ const DiscardedCards = () => {
 
   return (
     <CardsSection
-      actions={[{ label: 'Recover all', handler: handleRecoveraAll }]}
-      heading="Discarded Cards"
+      actions={[
+        { label: 'Select random card', handler: selectRandomCard },
+        { label: 'Clear selected card', handler: clearSelectedCard },
+        { label: 'Recover all', handler: handleRecoveraAll },
+      ]}
+      heading="Discarded cards"
     >
       <Cards
         actions={[
@@ -28,6 +39,7 @@ const DiscardedCards = () => {
           { label: 'Lose', handler: loseCard },
         ]}
         cards={cards}
+        selected={selectedCard}
       />
     </CardsSection>
   );
