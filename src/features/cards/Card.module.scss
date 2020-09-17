@@ -11,6 +11,10 @@
     filter: saturate(0.3);
   }
 
+  &.isSelected {
+    border-color: #ff0c71;
+  }
+
   img {
     display: block;
     border-radius: 4px;
