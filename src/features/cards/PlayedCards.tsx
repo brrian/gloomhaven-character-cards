@@ -7,7 +7,7 @@ import { CardState } from './models';
 import useDeckByState from './util/useDeckByState';
 
 const PlayedCards = () => {
-  const { activateCard, discardCard } = useCardsStore();
+  const { activateCard, discardCard, recoverCard } = useCardsStore();
 
   const cards = useDeckByState(CardState.Played);
 
@@ -26,6 +26,7 @@ const PlayedCards = () => {
         actions={[
           { label: 'Activate', handler: activateCard },
           { label: 'Discard', handler: discardCard },
+          { label: 'Put back', handler: recoverCard },
         ]}
         cards={cards}
       />
