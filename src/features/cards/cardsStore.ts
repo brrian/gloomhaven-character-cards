@@ -1,12 +1,22 @@
 import { decorate, observable } from 'mobx';
-import getCardById from '../cards/util/getCardById';
-import { Card, CardState, Deck } from './models';
+import { CardState, Deck, DeckCard } from './models';
+import getCardById from './util/getCardById';
 
-export default class DeckStore {
+export default class CardsStore {
   public deck: Deck;
 
   public constructor() {
-    const deck = ['bitingWind', 'blackFire', 'livingNight', 'dividedMind'];
+    const deck = [
+      'bitingWind',
+      'dividedMind',
+      'earthenSteed',
+      'inexorableMomentum',
+      'livingNight',
+      'oozingManifestation',
+      'strengthInNumbers',
+      'unendingDominance',
+      'wildAnimation',
+    ];
 
     this.deck = new Map(
       deck.map(id => [
@@ -40,7 +50,7 @@ export default class DeckStore {
     this.updateCardState(id, CardState.Available);
   };
 
-  private getDeckCardById = (id: string): Card => {
+  private getDeckCardById = (id: string): DeckCard => {
     const card = this.deck.get(id);
 
     if (!card) {
@@ -61,6 +71,6 @@ export default class DeckStore {
   };
 }
 
-decorate(DeckStore, {
+decorate(CardsStore, {
   deck: observable,
 });

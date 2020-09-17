@@ -1,5 +1,5 @@
-import { Card } from '../models';
 import cards from '../assets';
+import { Card } from '../models';
 
 export default function getCardById(id: string): Card {
   const card = cards[id];
