@@ -1,0 +1,16 @@
+.container {
+  display: flex;
+}
+
+.playedAndActiveCards {
+  display: flex;
+}
+
+.playedCards {
+  flex-shrink: 0;
+  width: 576px;
+}
+
+.activeCards {
+  flex-grow: 1;
+}

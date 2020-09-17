@@ -1,0 +1,20 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 20px;
+  background-color: rgba(#fff, 0.05);
+}
+
+.heading {
+  margin: 0;
+  color: #fff;
+  font-family: 'Pirata One', serif;
+  letter-spacing: 0.1em;
+}
+
+.buttons {
+  button {
+    font-size: 18px;
+  }
+}

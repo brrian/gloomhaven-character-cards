@@ -1,9 +1,9 @@
 import { useLocalStore } from 'mobx-react-lite';
 import React, { createContext, FC, useContext } from 'react';
-import DeckStore from './features/deck/deckStore';
+import CardsStore from './features/cards/cardsStore';
 
 interface StoreContext {
-  deck: DeckStore;
+  cards: CardsStore;
 }
 
 const StoreContext = createContext<StoreContext | undefined>(undefined);
@@ -18,13 +18,13 @@ export const useStore = (): StoreContext => {
   return store;
 };
 
-export const useDeckStore = (): DeckStore => {
-  return useStore().deck;
+export const useCardsStore = (): CardsStore => {
+  return useStore().cards;
 };
 
 export const StoreContextProvider: FC = ({ children }) => {
   const store = useLocalStore(() => ({
-    deck: new DeckStore(),
+    cards: new CardsStore(),
   }));
 
   return (
