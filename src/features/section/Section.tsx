@@ -1,21 +1,17 @@
 import React, { FC, MouseEvent } from 'react';
-import styles from './CardsSection.module.scss';
+import styles from './Section.module.scss';
 
 interface SectionAction {
   label: string;
   handler: (event: MouseEvent<HTMLButtonElement>) => void;
 }
 
-interface CardsSectionProps {
+interface SectionProps {
   actions?: SectionAction[];
   heading: string;
 }
 
-const CardsSection: FC<CardsSectionProps> = ({
-  actions,
-  children,
-  heading,
-}) => {
+const Section: FC<SectionProps> = ({ actions, children, heading }) => {
   return (
     <section>
       <header className={styles.header}>
@@ -35,4 +31,4 @@ const CardsSection: FC<CardsSectionProps> = ({
   );
 };
 
-export default CardsSection;
+export default Section;

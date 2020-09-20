@@ -14,3 +14,8 @@ interface DeckCard extends Card {
   state: CardState;
   updatedAt: number;
 }
+
+interface Action {
+  label: string;
+  handler: (id: string) => void;
+}

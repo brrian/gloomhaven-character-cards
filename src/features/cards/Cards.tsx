@@ -1,7 +1,6 @@
 import React, { FC } from 'react';
 import Card from './Card';
 import styles from './Cards.module.scss';
-import { Action } from './models';
 
 interface CardsProps {
   actions?: Action[];

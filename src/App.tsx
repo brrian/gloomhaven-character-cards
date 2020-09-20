@@ -5,6 +5,7 @@ import AvailableCards from './features/cards/AvailableCards';
 import DiscardedCards from './features/cards/DiscardedCards';
 import LostCards from './features/cards/LostCards';
 import PlayedCards from './features/cards/PlayedCards';
+import AvailableItems from './features/items/AvailableItems';
 
 const App: FC = () => {
   return (
@@ -17,6 +18,7 @@ const App: FC = () => {
           <ActiveCards />
         </div>
       </div>
+      <AvailableItems />
       <AvailableCards />
       <DiscardedCards />
       <LostCards />
