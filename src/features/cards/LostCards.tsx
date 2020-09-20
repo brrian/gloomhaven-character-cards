@@ -3,7 +3,7 @@ import React from 'react';
 import { useCardsStore } from '../../stores';
 import Cards from '../cards/Cards';
 import useDeckByState from '../cards/util/useDeckByState';
-import CardsSection from './CardsSection';
+import Section from '../section/Section';
 import { CardState } from './models';
 
 const LostCards = () => {
@@ -12,12 +12,12 @@ const LostCards = () => {
   const cards = useDeckByState(CardState.Lost);
 
   return (
-    <CardsSection heading="Lost cards">
+    <Section heading="Lost cards">
       <Cards
         actions={[{ label: 'Recover', handler: recoverCard }]}
         cards={cards}
       />
-    </CardsSection>
+    </Section>
   );
 };
 

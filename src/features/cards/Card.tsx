@@ -1,7 +1,6 @@
 import cc from 'classcat';
 import React, { FC } from 'react';
 import styles from './Card.module.scss';
-import { Action } from './models';
 
 interface CardProps {
   actions?: Action[];

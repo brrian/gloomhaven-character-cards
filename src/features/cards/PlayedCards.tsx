@@ -1,8 +1,8 @@
 import { observer } from 'mobx-react-lite';
 import React from 'react';
 import { useCardsStore } from '../../stores';
+import Section from '../section/Section';
 import Cards from './Cards';
-import CardsSection from './CardsSection';
 import { CardState } from './models';
 import useDeckByState from './util/useDeckByState';
 
@@ -18,7 +18,7 @@ const PlayedCards = () => {
   };
 
   return (
-    <CardsSection
+    <Section
       actions={[{ label: 'Discard all', handler: handleDiscardAllClick }]}
       heading="Current cards"
     >
@@ -30,7 +30,7 @@ const PlayedCards = () => {
         ]}
         cards={cards}
       />
-    </CardsSection>
+    </Section>
   );
 };
 
