@@ -1,5 +1,5 @@
 import { useCardsStore } from '../../../stores';
-import { CardState, DeckCard } from '../models';
+import { CardState } from '../models';
 
 export default function useDeckByState(state: CardState): DeckCard[] {
   const { deck } = useCardsStore();

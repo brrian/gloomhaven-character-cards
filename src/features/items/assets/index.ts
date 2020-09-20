@@ -165,7 +165,7 @@ import waveCrest from './wave-crest.png';
 import weightedNet from './weighted-net.png';
 import wingedShoes from './winged-shoes.png';
 
-const items = {
+const items: Cards = {
   amuletOfLife: {
     id: 'amuletOfLife',
     name: 'Amulet of Life',

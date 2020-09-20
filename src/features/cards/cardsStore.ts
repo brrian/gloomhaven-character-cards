@@ -1,5 +1,5 @@
 import { decorate, observable } from 'mobx';
-import { CardState, Deck, DeckCard } from './models';
+import { CardState } from './models';
 import getCardById from './util/getCardById';
 
 export default class CardsStore {
