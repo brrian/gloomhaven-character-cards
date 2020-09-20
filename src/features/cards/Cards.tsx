@@ -1,11 +1,11 @@
 import React, { FC } from 'react';
 import Card from './Card';
 import styles from './Cards.module.scss';
-import { Action, DeckCard as ICard } from './models';
+import { Action } from './models';
 
 interface CardsProps {
   actions?: Action[];
-  cards: ICard[];
+  cards: DeckCard[];
   selected?: Set<string>;
 }
 

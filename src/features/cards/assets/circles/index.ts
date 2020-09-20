@@ -1,4 +1,3 @@
-import { Cards } from '../../models';
 import bitingWind from './biting-wind.png';
 import blackFire from './black-fire.png';
 import bondedMight from './bonded-might.png';

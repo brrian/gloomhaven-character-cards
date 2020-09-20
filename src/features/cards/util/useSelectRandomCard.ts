@@ -1,6 +1,5 @@
 import { sample } from 'lodash';
 import { useState } from 'react';
-import { DeckCard } from '../models';
 
 interface UseSelectRandomCard {
   clearSelectedCard: () => void;
