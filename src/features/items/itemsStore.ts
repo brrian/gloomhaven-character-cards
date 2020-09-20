@@ -24,7 +24,7 @@ export default class ItemsStore {
     this.updateCardState(id, ItemState.Consumed);
   };
 
-  public recoverCard = (id: string): void => {
+  public refreshItem = (id: string): void => {
     this.updateCardState(id, ItemState.Available);
   };
 
