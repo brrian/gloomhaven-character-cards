@@ -6,7 +6,13 @@ export default class ItemsStore {
   public items: Deck;
 
   public constructor() {
-    const items = ['minorStaminaPotion', 'bootsOfSpeed', 'phasingIdol'];
+    const items = [
+      'minorStaminaPotion',
+      'majorStaminaPotion',
+      'majorHealingPotion',
+      'bootsOfSpeed',
+      'phasingIdol',
+    ];
 
     this.items = new Map(
       items.map(id => [

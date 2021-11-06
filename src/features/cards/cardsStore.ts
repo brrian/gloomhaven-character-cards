@@ -7,15 +7,19 @@ export default class CardsStore {
 
   public constructor() {
     const deck = [
-      'bitingWind',
-      'dividedMind',
-      'earthenSteed',
-      'inexorableMomentum',
-      'livingNight',
-      'oozingManifestation',
-      'strengthInNumbers',
-      'unendingDominance',
-      'wildAnimation',
+      // 'livingNight',
+      'unendingDominance', // Lvl 1
+      'wildAnimation', // Lvl 1
+      // 'blackFire', // Lvl 1
+      'bitingWind', // Lvl 1
+      'earthenSteed', // Lvl 2
+      // 'oozingManifestation', // Lvl 3
+      'dividedMind', // Lvl 4
+      'conjuredAid', // Lvl 5
+      // 'strengthInNumbers', // Lvl 5
+      'inexorableMomentum', // Lvl 6
+      'negativeEnergy', // Lvl 7
+      'otherworldlyRage', // Lvl 8
     ];
 
     this.deck = new Map(
